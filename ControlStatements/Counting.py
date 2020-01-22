@@ -1,0 +1,110 @@
+n=input("Enter a number: ")
+x=n/1000
+n=n%1000
+y=n/100
+n=n%100
+z=n/10
+n=n%10
+if(x!=0):
+    if(x==1):
+        print("One"),
+    if(x==2):
+        print("Two"),
+    if(x==3):
+        print("Three"),
+    if(x==4):
+        print("Four"),
+    if(x==5):
+        print("Five"),
+    if(x==6):
+        print("Six"),
+    if(x==7):
+        print("Seven"),
+    if(x==8):
+        print("Eight"),
+    if(x==9):
+        print("Nine"),
+    print("thousand"),
+
+if(y!=0):
+    if(y==1):
+        print("One"),
+    if(y==2):
+        print("Two"),
+    if(y==3):
+        print("Three"),
+    if(y==4):
+        print("Four"),
+    if(y==5):
+        print("Five"),
+    if(y==6):
+        print("Six"),
+    if(y==7):
+        print("Seven"),
+    if(y==8):
+        print("Eight"),
+    if(y==9):
+        print("Nine"),
+    print("hundred"),
+
+if(z!=0):
+
+    if(z==1):
+        if(n==0):
+            print("Ten")
+        if(n==1):
+            print("Eleven")
+        if(n==2):
+            print("Twelve")
+        if(n==3):
+            print("Thirteen")
+        if(n==4):
+            print("Forteen")
+        if(n==5):
+            print("Fifteen")
+        if(n==6):
+            print("Sixteen")
+        if(n==7):
+            print("Seventeen")
+        if(n==8):
+            print("Eighteen")
+        if(n==9):
+            print("Nineteen")
+    if(z==2):
+        print("Twenty"),
+    if(z==3):
+        print("Thirty"),
+    if(z==4):
+        print("Forty"),
+    if(z==5):
+        print("Fifty"),
+    if(z==6):
+        print("Sixty"),
+    if(z==7):
+        print("Seventy"),
+    if(z==8):
+        print("Eighty"),
+    if(z==9):
+        print("Ninety"),
+
+if(z!=1):
+    if(n==1):
+        print("One")
+    if(n==2):
+        print("Two")
+    if(n==3):
+        print("Three")
+    if(n==4):
+        print("Four")
+    if(n==5):
+        print("Five")
+    if(n==6):
+        print("Six")
+    if(n==7):
+        print("Seven")
+    if(n==8):
+        print("Eight")
+    if(n==9):
+        print("Nine")
+
+print("\nCOOOLLLL!!")
