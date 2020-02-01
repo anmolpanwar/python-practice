@@ -1,7 +1,7 @@
 from hashlib import *
 import time
 zeros = 2
-
+#pycharm app
 class transaction:
     transcount=0
     def __init__(self,fromadd,toadd,amount):
