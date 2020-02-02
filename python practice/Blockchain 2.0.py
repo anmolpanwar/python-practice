@@ -1,5 +1,5 @@
-zeros = 4
-class votechoice:
+difficulty = 4
+class vote:
     def __init__(self,voterId,candidate):
         self.voterId = voterId
         self.candidate = candidate
