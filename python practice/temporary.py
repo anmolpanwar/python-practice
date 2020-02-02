@@ -1,7 +1,8 @@
+from time import time
 def dec(fun):
-    def inner(*args,*kwagrs):
+    def inner():
         fun()
-        print ("function decorated")
+        print (time())
     return inner
 
 @dec

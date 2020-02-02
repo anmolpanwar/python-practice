@@ -1,5 +1,5 @@
 from hashlib import *
-import time
+from time import time
 zeros = 2
 #pycharm app
 class transaction:
@@ -8,7 +8,7 @@ class transaction:
         self.fromadd=fromadd
         self.toadd=toadd
         self.amount=amount
-        self.time = time.strftime('%d/%m/%Y - %H:%M:%S')
+        self.time = time()
 
         self.transobj = {'Sender_Address':self.fromadd,'Recipient_Address':self.toadd,'Amount':self.amount,'Time':self.time}
         Blockchain.pendingtrans.append(self.transobj)
@@ -17,7 +17,7 @@ class transaction:
 
     def abc(self):
         if transaction.transcount%4==0:
-            return Block(time.strftime('%d/%m/%Y - %H:%M:%S'),Blockchain.pendingtrans[:transaction.transcount-1:-1])
+            return Block(time(),Blockchain.pendingtrans[:transaction.transcount-1:-1])
 
 class Block:
     blockindex = 1
@@ -58,7 +58,7 @@ class Blockchain:
         pass
 
     def genesis(self):
-        return Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'data in genesis')
+        return Block(time(),'data in genesis')
 
     def addGenesis(self): #addBlock vale method me if length of chain is 0 --> add genesis block se ho sakta tha but...
         Blockchain.chain.append(self.genesis()) #baar baar block add karne pe ek if condition bar bar execute hoti faltu me
@@ -89,10 +89,10 @@ class Blockchain:
 
 chain = Blockchain()
 chain.addGenesis()
-b2 = Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'some data in 2nd block')
-b3 = Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'data in 3rd block')
+b2 = Block(time(),'some data in 2nd block')
+b3 = Block(time(),'data in 3rd block')
 chain.addBlock(b2)
- chain.addBlock(b3)
+chain.addBlock(b3)
 
 
 t1 = transaction('234523','23543etr',34)
