@@ -11,15 +11,7 @@ class transaction:
 
         self.transobj = {'Sender_Address':self.fromadd,'Recipient_Address':self.toadd,'Amount':self.amount,'Time':self.time}
         Blockchain.pendingtrans.append(self.transobj)
-import math
-t = int(input())
-for i in range(t):
-    num = int(input())
-    if math.log(num+1,2)%1==0:
-        print (num)
-        break
 
-    print (int(math.pow(2,int(math.log(num,2)))-1))
 class Block:
     blockindex = 1
     def __init__(self,ts,data,prevhash='0'):
