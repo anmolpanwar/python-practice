@@ -9,7 +9,7 @@ def func():
 @app.route('/home', methods = ['POST'])
 def func2():
     choice = request.form['candidate']
-    v1 = evote.vote(choice)
+    v2 = evote.vote(choice)
     print (evote.Blockchain.votepool)
     return redirect('/thanks')
 
@@ -18,5 +18,5 @@ def thank():
     return "Dhanyavaad!"
 
 if __name__=='__main__':
-    app.run()
+    app.run(port = 5002)
 
